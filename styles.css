@@ -1,0 +1,437 @@
+/* =================================================================
+   RA² - Arquivo de Estilos Principal
+   Versão Final e Corrigida (sem a animação de fundo)
+   ================================================================= */
+
+   body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0B3B2E;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+
+/* Estilo Base Comum */
+.btn-cta {
+    padding: 0.75rem 2rem; /* 12px 32px */
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre o texto e o ícone */
+    border: 2px solid transparent; /* Borda transparente para manter o tamanho no hover */
+}
+
+/* Botão Primário (Fundo Sólido) */
+.btn-primary {
+    background-color: #2ECC71; /* Verde */
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60; /* Verde mais escuro */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+}
+
+/* Botão Secundário (Fantasma/Ghost) */
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    border-color: white;
+    color: black;
+    transform: translateY(-3px);
+}
+
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Estilos para a Galeria de Especialidades (REVISADO) */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.solution-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(46, 204, 113, 0.1); /* Fundo verde mais sutil no hover */
+    border-color: #2ECC71;
+}
+
+.solution-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2ECC71;
+    transition: all 0.3s ease;
+}
+
+.solution-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.solution-card:hover .solution-icon {
+    transform: scale(1.1);
+}
+
+.solution-card:hover .solution-name {
+    color: white;
+}
+
+/* Estilos para a Seção de Valores (Pilares) */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center; /* Centraliza o último item */
+}
+
+.value-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(46, 204, 113, 0.05);
+    border-color: rgba(46, 204, 113, 0.4);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2ECC71;
+}
+
+.value-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.value-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* Estilos para o Terminal de Código */
+.terminal {
+    background-color: #0D0F10;
+    border-left: 4px solid #4ADE80;
+    border-radius: 8px;
+}
+
+.terminal-header {
+    background-color: #1A1D21;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.code-keyword, .code-decorator, .code-boolean { color: #F472B6; }
+.code-string { color: #4ADE80; }
+.code-function, .code-class-name { color: #60A5FA; }
+.code-comment { color: #6B7280; }
+.code-parameter { color: #A5B4FC; }
+
+/* Estilos para a nova seção Sobre Nós */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.about-visual {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.about-visual:hover {
+    transform: scale(1.03);
+    border-color: rgba(46, 204, 113, 0.4);
+}
+
+/* Estilos para o Formulário de Contato Aprimorado */
+.form-input-v2 {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    color: white;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-input-v2::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input-v2:focus {
+    outline: none;
+    border-color: #4ADE80;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+}
+
+/* Estilos para o Novo Rodapé Estruturado */
+.site-footer {
+    background-color: #0A2E24;
+    border-top: 1px solid rgba(74, 222, 128, 0.2);
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4ADE80;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-socials a {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #4ADE80;
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para o Modal de Serviços */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Desativado por padrão */
+}
+
+.modal-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto; /* Ativado quando visível */
+}
+
+.modal-container {
+    background-color: #0D0F10;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay:not(.hidden) .modal-container {
+    transform: scale(1);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close-button:hover {
+    color: #4ADE80;
+    transform: rotate(90deg);
+}
+
+.modal-icon {
+    font-size: 3.5rem;
+    color: #4ADE80;
+    margin-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+/* Estilos para a Animação de Partículas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos para a Vitrine de Projeto com Efeito de Revelação */
+.project-showcase-reveal {
+    max-width: 56rem; /* 896px */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.project-details-reveal {
+    max-width: 48rem; /* 768px */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem; /* Espaçamento entre o texto e a imagem */
+}
+
+.project-label-reveal {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #4ADE80;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.project-image-reveal-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    
+    /* Prepara para a animação */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-image-reveal-wrapper.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-image-reveal-wrapper img {
+    display: block;
+    width: 100%;
+    /* Opcional: Efeito de Paralaxe Sutil */
+    transition: transform 0.6s ease-out;
+}
+
+/* Efeito de hover continua o mesmo, mas agora na imagem revelada */
+.project-image-reveal-wrapper:hover img {
+    transform: scale(1.05);
+}
+

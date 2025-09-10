@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA² — Inovação e eficiência em tecnologia</title>
+    <link rel="icon" href="img/logo-ra.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/15d5d5e5e5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Geometric background elements -->
+    <div class="geometric-shape shape-1"></div>
+    <div class="geometric-shape shape-2"></div>
+    <div class="geometric-shape shape-3"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center relative z-10 fade-in">
+        
+        <!-- TELA PARA A ANIMAÇÃO DE PARTÍCULAS -->
+        <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+        <!-- Conteúdo da Hero Section (agora na frente da animação) -->
+        <div class="container mx-auto px-6 py-20 text-center relative z-10">
+            <div class="mb-12">
+                <!-- O DIV COM O LOGO FOI REMOVIDO -->
+                
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Inovação em Cada Solução</h1>
+                <p class="text-xl md:text-2xl opacity-80 mb-10">Desenvolvemos tecnologia que conecta pessoas, processos e resultados de forma eficiente e moderna.</p>
+                <!-- Div dos botões com o novo HTML -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    
+                    <!-- Botão Secundário (Ghost) -->
+                    <a href="#quem-somos" class="btn-cta btn-secondary">
+                        Conheça a RA²
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+
+                    <!-- Botão Primário (Principal) -->
+                    <a href="#contato" class="btn-cta btn-primary">
+                        Fale Conosco
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- About Section -->
+    <section class="py-20 px-6 fade-in" id="quem-somos">
+        <div class="max-w-6xl mx-auto">
+            <div class="about-grid">
+                
+                <!-- Coluna de Texto (Esquerda) -->
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossa Missão é Simplificar o Complexo</h2>
+                    <p class="text-xl opacity-80 mb-8">
+                        Nós da RA² acreditamos que a tecnologia deve impulsionar o crescimento, não criar obstáculos. Transformamos problemas complexos em soluções digitais intuitivas e eficientes, adaptadas às necessidades de cada negócio. Com inovação, expertise e comprometimento, ajudamos empresas e organizações a alcançarem resultados reais e a se destacarem no futuro digital.
+                    </p>
+                </div>
+
+                <!-- Coluna Visual (Direita) - CORRIGIDA -->
+                <div class="about-visual flex items-center justify-center p-8 md:p-12">
+                    
+                    <!-- A imagem agora está sozinha, sem o div extra, e com classes de tamanho -->
+                    <img src="img/logo-ra.svg" alt="Logo da RA² Tecnologia" class="w-full h-auto">
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section: Software Solutions Gallery (AJUSTADO) -->
+    <section class="py-20 px-6 bg-black bg-opacity-20 fade-in" id="o-que-fazemos">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">O que fazemos</h2>
+            <p class="text-xl opacity-80 mb-16 max-w-3xl mx-auto">Da web ao mobile, criamos soluções digitais de alta performance para cada necessidade do seu negócio.</p>
+            
+            <div class="solutions-grid">
+                
+                <!-- Card 1: Aplicações Web -->
+                <div class="solution-card" data-service="web">
+                    <div class="solution-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3 class="solution-name">Aplicações Web</h3>
+                </div>
+
+                <!-- Card 2: Apps Mobile -->
+                <div class="solution-card" data-service="mobile">
+                    <div class="solution-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3 class="solution-name">Apps Mobile</h3>
+                </div>
+
+                <!-- Card 3: Sistemas de Gestão -->
+                <div class="solution-card" data-service="gestao">
+                    <div class="solution-icon"><i class="fa-solid fa-chart-diagram"></i></div>
+                    <h3 class="solution-name">Sistemas de Gestão</h3>
+                </div>
+
+                <!-- Card 4: APIs e Microsserviços -->
+                <div class="solution-card" data-service="apis">
+                    <div class="solution-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="solution-name">APIs & Microsserviços</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Values Section -->
+    <section class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">Nossos Pilares</h2>
+            
+            <div class="values-grid">
+                
+                <!-- Valor 1: Inovação -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3 class="value-title">Inovação Contínua</h3>
+                    <p class="value-description">Buscamos incansavelmente novas tecnologias e métodos para entregar soluções que definem o futuro.</p>
+                </div>
+
+                <!-- Valor 2: Eficiência -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <h3 class="value-title">Eficiência e Foco</h3>
+                    <p class="value-description">Otimizamos processos e códigos para garantir entregas rápidas, robustas e de alta performance.</p>
+                </div>
+
+                <!-- Valor 3: Compromisso -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+                    <h3 class="value-title">Compromisso Real</h3>
+                    <p class="value-description">Seu sucesso é o nosso. Nos dedicamos a cada projeto com transparência, parceria e responsabilidade.</p>
+                </div>
+
+                <!-- Valor 4: Visão de Futuro -->
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3 class="value-title">Visão de Futuro</h3>
+                    <p class="value-description">Construímos hoje as soluções que vão sustentar e escalar seu negócio no cenário de amanhã.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Code Section -->
+    <section class="section py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto terminal rounded-lg overflow-hidden shadow-lg">
+                <div class="terminal-header flex items-center px-4 py-2 bg-gray-900">
+                    <div class="flex space-x-2 mr-4">
+                        <div class="terminal-dot bg-red-500"></div>
+                        <div class="terminal-dot bg-yellow-500"></div>
+                        <div class="terminal-dot bg-green-500"></div>
+                    </div>
+                    <div class="text-sm opacity-70">RA2.py</div>
+                </div>
+                <div class="p-6 font-mono text-sm md:text-base text-green-400">
+    <pre>
+    <span class="code-comment"># RA²</span>
+
+    <span class="code-keyword">def</span> <span class="code-function">solucao_ra2</span>(problema):
+        <span class="code-keyword">return</span> f"RA² resolve '{problema}' com inovação, eficiência e tecnologia."
+
+    <span class="code-function">print</span>(<span class="code-function">solucao_ra2</span>("gestão complexa de processos"))
+    <span class="code-function">print</span>(<span class="code-function">solucao_ra2</span>("integração de plataformas"))
+    <span class="code-function">print</span>(<span class="code-function">solucao_ra2</span>("otimização de resultados"))
+    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Featured Project Section -->
+    <section class="py-20 px-6 fade-in" id="projetos">
+        <div class="project-showcase-reveal">
+            
+            <!-- Detalhes do Projeto -->
+            <div class="project-details-reveal">
+                <div class="project-label-reveal">Projeto em Destaque</div>
+                <h3 class="text-4xl md:text-5xl font-bold mb-4">ALOCATUS</h3>
+                <p class="text-lg md:text-xl opacity-80 leading-relaxed">
+                    Uma plataforma de gestão escolar focada em atribuição de aulas que simplifica processos, organiza recursos e garante transparência e eficiência, economizando tempo e reduzindo erros para toda a comunidade escolar.
+                </p>
+            </div>
+
+            <!-- Imagem que será revelada -->
+            <div class="project-image-reveal-wrapper">
+                <img src="img/interface-alocatus.jpeg" alt="Interface do sistema de gestão escolar Alocatus">
+            </div>
+
+        </div>
+    </section>
+
+
+
+    
+    <!-- Contact Section -->
+    <section class="py-20 px-6 bg-black bg-opacity-20 fade-in" id="contato">
+        <div class="max-w-2xl mx-auto text-center">
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Inicie uma Parceria Estratégica</h2>
+            <p class="text-xl opacity-80 mb-12">Vamos transformar seu desafio de negócio em uma solução tecnológica robusta e eficiente.</p>
+
+           <form id="contact-form" class="space-y-6 text-left">
+                <div>
+                    <label for="name" class="sr-only">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Nome e Sobrenome" class="form-input-v2" required>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail corporativo" class="form-input-v2" required>
+                </div>
+                <div>
+                    <label for="title" class="sr-only">Assunto</label>
+                    <input type="text" id="title" name="title" placeholder="Assunto" class="form-input-v2" required>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Descreva brevemente seu projeto ou necessidade." rows="6" class="form-input-v2" required></textarea>
+                </div>
+                <div class="text-center pt-4">
+                    <button type="submit" class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white px-10 py-3 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                        Solicitar Contato
+                    </button>
+                </div>
+            </form>
+
+
+            <div class="mt-12 text-center">
+                <p class="opacity-70">Para enviar anexos ou propostas, utilize nosso e-mail direto: <a href="mailto:ra2tecnologia.suporte@gmail.com" class="font-semibold text-green-400 hover:text-green-300 underline transition-colors">ra2tecnologia.suporte@gmail.com</a></p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    
+    <!-- Footer -->
+    <footer class="site-footer py-12 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="footer-grid grid grid-cols-2 gap-8">
+                <!-- Coluna 1: Marca -->
+                <div>
+                    <div class="text-4xl font-bold tracking-tighter mb-4">
+                        <span class="text-white">RA</span><span class="text-green-400">²</span>
+                    </div>
+                    <p class="opacity-70 pr-4">Desenvolvendo o futuro, hoje. Soluções tecnológicas que impulsionam negócios.</p>
+                </div>
+
+                <!-- Coluna 2: Navegação -->
+                <div>
+                    <h3 class="footer-title">Navegue</h3>
+                    <div class="footer-links">
+                        <a href="#quem-somos">Sobre Nós</a>
+                        <a href="#o-que-fazemos">O que Fazemos</a>
+                        <a href="#projetos">Projetos</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Linha de Copyright -->
+            <div class="footer-copyright">
+                <p>© 2025 RA² Tecnologia. Todos os direitos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+
+<!-- Estrutura do Modal de Serviços -->
+<div id="service-modal" class="modal-overlay hidden">
+    <div class="modal-container">
+        <!-- Botão de Fechar -->
+        <button id="modal-close-btn" class="modal-close-button">&times;</button>
+        
+        <!-- Conteúdo Dinâmico do Modal -->
+        <div id="modal-content-target" class="text-center">
+            <!-- O JavaScript vai inserir o conteúdo aqui -->
+        </div>
+    </div>
+</div>
+
+
+    
+<script src="scripts.js"></script>
+<script src="https://kit.fontawesome.com/df226d5321.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("t-w-lrls0DgVxjaAI");
+  })();
+</script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    emailjs.sendForm('service_uu3164o', 'template_49laefm', this) // substitua pelos IDs do seu serviço e template
+      .then(function() {
+        alert('Mensagem enviada com sucesso!');
+        document.getElementById('contact-form').reset(); 
+      }, function(error) {
+        alert('Erro ao enviar a mensagem: ' + JSON.stringify(error));
+      });
+});
+</script>
+
+
+</body>
+
+</html>
+
