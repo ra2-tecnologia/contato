@@ -119,22 +119,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- [4] Animação de Revelação do Projeto ---
-    const projectImageWrapper = document.querySelector('.project-image-reveal-wrapper');
+    const projectImageWrappers = document.querySelectorAll('.project-image-reveal-wrapper');
 
-    if (projectImageWrapper) {
-        const revealObserver = new IntersectionObserver((entries) => {
+    if (projectImageWrappers.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    // Opcional: para a observação após a primeira animação
-                    revealObserver.unobserve(entry.target); 
+                    observer.unobserve(entry.target); // Para observar só uma vez
                 }
             });
         }, {
-            threshold: 0.1 // A animação começa quando 10% da imagem está visível
+            threshold: 0.1 // Começa quando 10% da imagem está visível
         });
 
-        revealObserver.observe(projectImageWrapper);
+        projectImageWrappers.forEach(wrapper => revealObserver.observe(wrapper));
     }
 
 
